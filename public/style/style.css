@@ -1,0 +1,1060 @@
+@font-face{
+    font-family: 'roboto';
+    src: url('/public/fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: "roboto_bold";
+    src: url("/public/fonts/Roboto-Bold.ttf") format("truetype");
+}
+@font-face{
+    font-family:"roboto_medium";
+    src: url("/public/fonts/Roboto-Medium.ttf") format("truetype");
+}
+@font-face{
+    font-family: "roboto_black";
+    src: url("/public/fonts/Roboto-Black.ttf") format("truetype");
+    }
+
+html{
+    font-size: 100%;
+}
+
+        /*Design du cercle font-awesome*/
+.fa-circle{
+    color: #30A2BF;
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+        /*Design du sépateur sous nos services et nos projets*/
+.sous-titre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ligne_gauche, .ligne_droite{
+    border: none;
+    background-color: grey;
+    opacity: 0.2;
+    width: 70px;
+    height: 2px;
+}
+
+        /*barre de navigation*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 80px;
+    top: 0%;
+    margin-bottom: 0px;
+    background-color:white;
+    position: fixed;
+    z-index: 200;
+}
+
+        /*on positionne l'image de la barre de navigation*/
+nav img{
+    position: absolute;
+    left: 150px;
+    bottom: 10px;
+}
+
+        /*Positionnement de la div menu, qui contient les liens accueil, services, portfolio, contact*/
+#menu{
+    width: 25%;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+        /*Design des liens du menu*/
+#menu a{
+    font-family: roboto;
+    font-size: 0.9em;
+    width: 5rem;
+    height: 77px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);  /*Couleur par défaut des liens (gris).*/
+}
+
+        /*lien_accueil actif et au hover sur services, portfolio et contact*/
+#menu #lien_accueil, #menu a:hover{
+    border-top: 3px solid #5cadd3;
+    color: black;
+}
+
+        /*Section Accueil*/
+#accueil{
+    width: 100%;
+    padding-top: 80px;
+    margin-top: -8px;
+    position: relative;
+}
+
+#accueil img{
+    width: 100%;
+}
+
+        /*Taille et positionnement du bloc de présentation*/
+#presentation{
+    width: 900px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 33%;
+    left: 150px;
+    width: 40em;
+}
+
+        /*Le titre H1*/
+#presentation h1{
+    font-family: roboto_bold;
+    color: white;
+    font-weight: bolder;
+    font-size: 2.5rem;
+    margin-bottom: 0px;
+}
+
+#presentation strong{
+    color: #30A2BF;
+}
+
+        /*Design du paragraphe de présentation*/
+#presentation p{
+    font-family: roboto_bold;
+    font-size: 14px;
+    color: white;
+}
+
+        /*Design du bouton plus d'infos*/
+#presentation a{
+    font-family: roboto_medium;
+    background-color: #5cadd3;
+    color: white;
+    text-decoration: none;
+    width: 7rem;
+    height: 40px;
+    margin-top: 5px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 5px solid #5390b0;
+}
+
+#presentation a:hover{
+    background-color: white;
+    color: #5cadd3;
+}
+
+        /*Design et positionnement des flèches de l'accueil*/
+        /*Les flèches sont en absolute, par rapport à #accueil qui est en relative*/
+#chevron_droit{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 40px;
+    height: 70px;
+    border-top-left-radius: 160px;
+    border-bottom-left-radius: 160px;
+    color: WHITE;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#chevron_gauche{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 40px;
+    height: 70px;
+    border-top-right-radius: 160px;
+    border-bottom-right-radius: 160px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+        /*Grossissement de la fleche au survol*/
+#chevron_gauche:hover, #chevron_droit:hover{
+    font-size: 2rem;
+}
+
+        /*barre de progression*/
+.loading{
+    width: 100%;
+    height: 0.4em;
+    position: relative;
+    top: -10px;
+    border: none;
+}
+
+.loading .loading_bar{
+    height: 100%;
+    background-color: #5390b0;
+}
+
+#services{
+    font-family: roboto;
+    font-size: 0.9rem;
+    width: 100%;
+    height: 600px;
+    padding-top: 80px;
+   }
+
+#services header{
+    width: 40%;
+    margin: auto;
+    text-align: center;
+}
+
+#services header h2{
+    font-family: roboto_medium;
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+        /*Positionnement de l'image et de la boite à articles*/
+#services #sous-section{
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 200px;
+    padding-right: 150px;
+}
+
+article h4{
+    font-size: 1.1rem;
+}
+
+#boite_articles{
+    height: 350px;
+    align-self: flex-end;
+    width: 50%;
+}
+
+article{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+article p{
+    margin-left: 80px;
+    margin-top: 0px;
+    position: relative;
+    top: -10px;
+}
+
+        /*Design des visuels des 3 services (camembert, fleche et cubes)*/
+#services .fa-chart-line, #services .fa-cubes, #services .fa-chart-pie{
+    height: 30px;
+    width: 30px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+    padding: 15px;
+    border-radius: 30px;
+    color: #30A2BF;
+    position: relative;
+    top: 20px;
+}
+
+        /*Design et positionnement du cercke bleu des services*/
+#services article .fa-circle{
+    font-size: 12px;
+    position: relative;
+    left: -9px;
+    top: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: white;
+    }
+
+        /*Design de la section nos projets*/
+#projets{
+    width: 100%;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    background-color: rgba(20, 20, 20, 0.05);
+}
+
+        /*L'en-tête est en flex vertical*/
+#projets header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#projets header h2{
+    font-family: roboto_medium;
+    font-size: 2rem;
+}
+
+#projets header p{
+    font-family: roboto;
+    font-size: 0.9em;
+    text-align: center;
+    width:600px;
+}
+
+        /*design general barre de liens de la section projets*/
+#projets #liens_projets{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-bottom: 1px;
+    padding-top: 2px;
+    display: flex;
+    justify-content: center;
+    font-family: roboto_medium;
+    font-size: 0.9rem;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    background: rgba(139, 138, 138, 0.1);
+}
+
+        /*Design de la flèche, par défaut transparente*/
+.fa-sort-down{
+    font-size: 2.5em;
+    color: #4a91b3;
+    position: absolute;
+    bottom: -40%;
+    opacity: 0;
+}
+
+        /*design des liens non actifs (creative, corporate, portfolio)*/
+#liens_projets a{
+    text-decoration: none;
+    color: black;
+    width: 25%;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -5%;
+}
+
+        /*design des liens all works et avec hover*/
+ #all_works:link, #all_works:focus, #liens_projets a:hover{
+    width: 25%;
+    height: 39px;
+    background-color: #5CADD3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5CADD3;
+    border-bottom: 3px solid #4a91b3;
+    color: white;
+}
+
+        /*afficher la fleche constamment sur all works et au hover des autres liens*/
+#all_works .fa-sort-down, #liens_projets a:hover .fa-sort-down{
+    opacity: 1;
+}
+
+        /*radius sur all_works et portfolio*/
+#liens_projets #all_works{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#liens_projets #portfolio{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+        /*Positionnement des images: centrées et retour à la ligne*/
+#miniatures{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+    /*la figure est en relative en prévision du positionnement de la figcaption*/
+figure{
+    width: 20%;
+    position: relative;
+    margin-right: 5px;
+}
+
+figure img{
+    width: 100%;
+}
+
+    /*Positionnement de figcaption, en absolute, par rapport à la figure*/
+    /*Design des figcaption: par défaut transparente*/
+figcaption{
+    position: absolute;
+    bottom: 4px;
+    font-family: roboto;
+    font-size: 0.9EM;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding-left: 3%;
+    padding-top: 3%;
+    width: 97%;
+    height: 50px;
+    opacity: 0;
+}
+
+        /* Si hover sur la figure, alors nouveau design de figcaption: qui devient visible*/
+figure:hover figcaption{
+    opacity: 1;
+}
+
+        /*Design du visuel de la légende*/
+.fa-eye{
+    color: white;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -19px;
+    right: 10px;
+    background-color: #5390b0;
+    border: 2px solid white;
+}
+
+footer{
+    width: 100%;
+    font-family: roboto;
+    font-size: 0.8em;
+    padding-top: 80px;
+    display: flex;
+    position: relative;
+}
+
+        /*couleur de fond sur la div map, pour le filtre bleu*/
+#map{
+    background-color: #5390b0;
+    width: 100%;
+}
+
+        /*l'iframe occupe toute la largeur de la div map*/
+iframe{
+    opacity: 0.7;
+    width: 100%;
+}
+
+        /*positionnement du formulaire*/
+fieldset{
+    width: 320px;
+    height: 510px;
+    background-color:rgba(255, 255, 255, 0.7);
+    border: none;
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+}
+
+fieldset h3{
+    font-family: roboto_medium;
+    font-size: 2em;
+}
+
+fieldset p{
+    font-family: roboto_medium;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+        /*Champs "name" "email" et "subject"*/
+input{
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: roboto;
+    font-size: 1em;
+    padding-left: 10px;
+    border: 1px solid;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+        /*champs message*/
+textarea{
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+    font-family: roboto;
+    font-size: 1em;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+        /*Design du bouton envoyer */
+#submit{
+    width:110px;
+    height: 35px;
+    background-color: #5CADD3;
+    color: white;
+    font-family: roboto_bold;
+    border-radius: 3px;
+    border: none;
+    border-bottom: 3px solid #3491B2;
+    text-align: center;
+}
+
+#submit:hover{
+    color: #5cadd3;
+    background-color: white;
+    border: 1px solid #5CADD3;
+    border-bottom: 3px solid;
+}
+
+/*-------------------Breakpoint 1: iPad (768x1024)-----------------*/
+
+
+@media screen and (min-width: 435px) and (max-width: 768px)
+{
+
+    nav img{
+        left: 5%;
+        bottom: 25%;
+        width: 20%;
+    }
+
+    nav{
+        width: 100%;
+    }
+
+    nav #menu{
+        width: 40%;
+    }
+
+    #presentation{
+        top: 40%;
+        left: 5%;
+        width: 20rem;
+        height: 10rem;
+    }
+
+    #chevron_droit, #chevron_gauche{
+        width: 1.5rem;
+        height: 3rem;
+    }
+    
+    #presentation h1{
+        font-family: roboto_black;
+        color: white;
+        font-weight:bolder;
+        font-size: 1.2rem;
+        margin-bottom: 0px;
+    }
+    
+    #presentation p{
+        font-family: roboto_bold;
+        font-size: 0.7rem;
+        color: white;
+    }
+    
+    #presentation a{
+        font-size: 0.8em;
+        width: 5rem;
+        height: 30px;
+    }
+
+    #services header{
+        width: 80%;
+    }
+
+    #services #sous-section{
+        padding-left: 0px;
+        padding-right: 0px;
+        align-items: flex-start;
+    }
+
+    #services img{
+        width: 400px;
+        position: relative;
+        top: 80px;
+    }
+
+    #services #boite_articles{
+        align-self: flex-start;
+        width: 60%;
+        height: 25rem;
+        font-size: 0.9em;
+    }
+
+    #services h4{
+        font-size: 1.5em;
+    }
+
+    #services .fa-chart-line, #services .fa-cubes, #services .fa-chart-pie{
+        font-size: 15px;
+        height: 15px;
+        width: 15px;
+        height: 15px;
+    }
+
+    #services article .fa-circle{
+        font-size: 9px;
+    }
+
+    article p{
+        margin-left: 64px;   
+    }
+
+    #projets{
+        margin-top: 0px;
+    }
+
+    #projets figure{
+        width: 45%;
+        margin: 5px;
+    }
+
+    footer{
+        position: static;
+        display: flex;
+        flex-direction: column;
+        width: 100%
+    }
+
+    fieldset{
+        width: 100%;
+        position: static;
+        display: flex;
+        height: 10rem;
+        padding-top: 20px;
+    }
+
+    #contact_info{
+        width: 12rem;
+    }
+
+    #contact_info h3{
+        margin-top: 0px;
+    }
+
+    form{
+        width: 34rem;
+        flex-wrap: wrap;
+        align-content: space-around;
+    }
+
+    form #message{
+        order: 1;
+        width: 15rem;
+    }
+
+    form input{
+        margin-bottom: 0.2rem;
+        height: 1.6rem;
+    }
+
+    form #submit{
+        width: 17rem;
+    }
+
+}
+
+/*----------------------------------------------------------------------------------------------------------------------------------*/
+        /*Breakpoint 2: MATE10_Pro : 432*864px*/
+
+@media screen and (max-width: 432px)
+{
+
+    html{
+        font-size: 80%;
+    }
+
+    nav{
+        width: 96%;
+        height: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-content: center;
+    }
+
+    nav img{
+        position: static;
+        width: 10em;
+    }
+
+    #menu{
+        height: 2.5rem;
+        width: 80%;
+        margin: 0px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #menu a, #menu #lien_accueil, #menu a:hover{
+        height: 1rem;
+        color: black;
+        border: 0px;
+        margin: 0px;
+        font-size: 1.2rem;
+    }
+
+    #accueil{
+        width: 100%;
+        padding-top: 70px;
+        display: flex;
+        flex-direction: column;
+        height: 19rem;
+    }
+
+    #chevron_gauche, #chevron_droit{
+        top: 10rem;
+        font-size: 0.8rem;
+        width: 1rem;
+        height: 1.5rem;
+    }
+
+    #accueil #presentation{
+        position: static;
+        margin-top: 0px;
+        height: 9rem;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(52, 145, 178, 0.4);
+    }
+
+    #presentation h1{
+        font-family: roboto_medium;
+        font-size: 1.2rem;
+    }
+    
+    #presentation p{
+        font-family: roboto;
+        font-size: 1rem;
+        margin-top: 0px;
+    }
+
+    #presentation a{
+        align-self: center;
+        background-color: white;
+        color: #3491B2;
+    }
+
+    .loading{
+        position: static;
+        position: relative;
+        top: -0.4em;
+    }
+
+    #services{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services header{
+        width: 100%;
+    }
+
+    #services #sous-section{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height:40rem;
+        padding: 0px;
+    }
+
+    #services img{
+        width: 50%;
+    
+    }
+
+    #boite_articles{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #boite_articles article{
+        width: 90%;
+        margin: auto;
+    }
+
+    #boite_articles p{
+        font-size: 1rem;
+        width: 22rem;
+        left: -2rem;
+
+    }
+
+    #boite_articles .fa-chart-line, #boite_articles .fa-cubes, #boite_articles .fa-chart-pie{
+        font-size: 1rem;
+        width: 5px;
+        height: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #services article .fa-circle{
+        font-size: 8px;
+    }
+
+    #projets, #projets header p,  #projets #miniatures{
+        width: 100%;
+    }
+
+    #projets #liens_projets{
+        width: 25rem;
+    }
+
+    #projets .fa-sort-down{
+        font-size: 2.7rem;
+    }
+
+    #miniatures{
+        display: flex;
+        flex-direction: column;
+    }
+
+    figure{
+        position: static;
+        width: 90%;
+        margin: auto;
+    }
+
+    #figcaption{
+        display: none;
+    }
+
+    footer{
+        position: static;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer fieldset{
+        position: static;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contact_info{
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    footer form{
+        width: 100%;
+        height: 50rem;
+        justify-content: space-around;
+    }
+
+    footer #map, footer iframe{
+        height: 350px;
+    }
+
+    textarea{
+        font-family: roboto;
+        width: 96%;
+    }
+
+    form #submit{
+        width: 18rem;
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    form #submit{
+        order: +1;
+    }
+}
+
+             /*breakpoint 2: S9/S9+ (360x740)*/
+
+/*@media screen and (max-width: 360px)
+{
+    html{
+        font-size: 80%;
+    }
+
+    nav{
+        width: 100%;
+        height: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: normal;
+    }
+
+    nav img{
+        position: static;
+        width: 10em;
+        margin-left: 0px;
+    }
+
+    nav #menu{
+        width: 60%;
+        justify-content: normal;
+        align-items: center;
+    }
+
+    #menu a, #menu #lien_accueil, menu a:hover{
+        height: 1rem;
+        color: black;
+        border: none;
+    }
+
+    #accueil{
+        width: 100%;
+        height: 10em;
+        padding-top: 0px;
+        margin-top: 50px;
+        border: 2px solid red;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #accueil #presentation{
+        border: 2px solid blue;
+        position: static;
+        margin-top: 0px;
+        background-color: #3491B2;
+        height: 5rem;
+    }
+
+    #accueil  #chevron_droit, #accueil #chevron_gauche{
+        font-size: 0.8rem;
+        width: 1rem;
+        height: 1.5rem;
+    }
+
+    #services #sous-section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height:40rem;
+    }
+
+    #services img{
+        width: 70%;
+        margin-top: -5rem;
+    
+    }
+
+    #boite_articles{
+        width: 100%;
+        margin-top: 7rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #boite_articles p, #boite_articles h4{
+        font-size: 1rem;
+        width: 22rem;
+        left: -0.8rem;
+
+    }
+
+    #boite_articles .fa-chart-line, #boite_articles .fa-cubes, #boite_articles .fa-chart-pie{
+        font-size: 1rem;
+        width: 5px;
+        height: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #projets header p{
+        width: 20rem;
+    }
+
+    #projets #liens_projets{
+        width: 25rem;
+    }
+
+    #projets .fa-sort-down{
+        font-size: 2.7rem;
+    }
+
+    #miniatures{
+        display: flex;
+        flex-direction: column;
+    }
+
+    figure{
+        position: static;
+        width: 400px;
+    }
+
+    figure img{
+        width: 320px;
+    }
+
+    footer{
+        align-items: center;
+    }
+
+    footer fieldset{
+        position: static;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 35rem;
+    }
+
+    #contact_info{
+        width: 100%;
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    footer form{
+        width: 20rem;
+        height: 50rem;
+        justify-content: space-around;
+    }
+
+    footer #map, footer iframe{
+        height: 350px;
+    }
+
+    form #message{
+        width: 17rem;
+    }
+
+    form #submit{
+        width: 18rem;
+        font-size: 1rem;
+    }
+
+    form #submit{
+        order: +1;
+    }
+
+}*/

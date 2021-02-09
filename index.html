@@ -1,0 +1,210 @@
+<!DOCTYPE html><!--définit qu'il s'agit d'une page html-->
+<html lang="fr">
+
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/><!--Configuration du viewport-->
+		<meta charset="utf-8" /><!--type d'encodage de la page-->
+		<title>WebAgency</title>
+		<link rel="icon" type="image/jpg" href="public/images/favicon.ico" />
+		<link href="public/style/style.css" rel="stylesheet"/>
+		<script src="https://kit.fontawesome.com/b524cca034.js" crossorigin="anonymous"></script>
+	</head>
+	
+	<body>
+		
+		<!--Barre de navigation, liens principaux-->
+		<nav>
+
+			<a href="index.html"><img src="public/images/webagency_images/logo.png" alt="logo" /></a>
+			
+			<div id="menu">
+				<a id="lien_accueil" href=#accueil>Accueil</a>
+				<a id="lien_service" href=#services>Services</a>
+				<a id="lien_projet" href=#projets>Portfolio</a>
+				<a id="lien_contact" href=#contact>Contact</a>
+			</div>
+
+		</nav>
+		
+		<!--Slider-->
+		<header id='slider_component'>
+			<!--<div id="accueil">
+				<img src="public/images/webagency_images/slider/bg1.jpg" alt="Fillette aux mains colorées" />
+				<progress value="20"  max="100"></progress>
+				<div id='chevron_gauche'>
+					<i class="fas fa-chevron-left"></i>
+				</div>
+				<div id="chevron_droit">
+					<i class="fas fa-chevron-right"></i>
+				</div>
+				<div id="presentation">
+					<h1><strong>WEBAGENCY</strong> :  L'AGENCE DE TOUS VOS PROJETS !</h1>
+					<p>Vous avez un projet web? La WebAgency vous aide à le réaliser!</p>
+					<a href="#contact">Plus d'infos</a>
+				</div>
+			</div>-->
+		</header>
+		
+		<!--Section nos services-->
+		<section id="services">
+			
+			<!--En-tête de la section-->
+			<header>
+				<h2>NOS SERVICES</h2>
+				<div class="sous-titre">
+					<div><hr class="ligne_gauche"/></div>
+					<i class="fas fa-circle"></i>
+					<div><hr class="ligne_droite"/></div>
+				</div>
+				<p>De la conception à sa mise en ligne, en passant par l'interface utilisateur et le référencement,
+					la WebAgency vous accompagne dans votre projet Web.
+				</p>		
+			</header>	
+
+			<!--image + boite à articles-->
+			<div id="sous-section">
+				<img src="public/images/webagency_images/main-feature.png" alt="image d'écran" />
+			
+				<!--Les 3 services proposés-->
+				<div id="boite_articles">
+					<article id="ux">
+						<i class="fas fa-chart-line"></i><i class="fas fa-circle"></i>
+						<h4>UX design</h4>
+						<p>Nous nous mettons à la place des utilisateurs afin de proposer la meilleure expérience de navigation possible.</p>
+					</article>
+
+					<article id="ui">
+						<i class="fas fa-cubes"></i><i class="fas fa-circle"></i>
+						<h4>UI design</h4>
+						<p>Nous vous proposons des designs originaux, et sutout sur-mesure, en accord avec votre projet web, à la fois agréables a l'oeil et ergonomiques.</p>
+					</article>
+
+					<article id="seo">
+						<i class="fas fa-chart-pie"></i><i class="fas fa-circle"></i>
+						<h4>SEO</h4>
+						<p>Nous veillons à l'optimisation de votre projet pour les moteurs de recherche et sa bonne position lors des requêtes.</p>
+					</article>
+				</div>
+				
+			</div>
+
+		</section>
+			
+		<!--Section nos projets-->
+		<section id="projets">
+
+			<!--En-tête de la section nos projets-->
+			<header>
+				<h2>NOS PROJETS</h2>
+				<div class="sous-titre">
+					<div><hr class="ligne_gauche"/></div>
+					<div id="cercle_projets"><i class="fas fa-circle"></i></div>
+					<div><hr class="ligne_droite"/></div>
+				</div>
+				<p>Du site web amateur au site marchand et professionnel, voici un aperçu des projets déjà réalisés.</p>
+			</header>
+
+			<!--Barre de liens/filtres des projets-->
+			<div id="liens_projets">
+				<a id="all_works" href="lien_allworks">All Works<i class="fas fa-sort-down"></i></a>
+				<a id="creative" href="#projets">Creative<i class="fas fa-sort-down"></i></a>
+				<a id="corporate" href="#projets">Corporate<i class="fas fa-sort-down"></i></a>
+				<a id="portfolio" href="#projets">Portfolio<i class="fas fa-sort-down"></i></a>
+			</div>
+
+			<!--Liste des projets + leur légende-->
+			<div id="miniatures">
+				<figure>
+					<img src="public/images/webagency_images/portfolio/01.jpg" alt="image1" />
+					<figcaption>L'optique à moindre coût<br/>Le projet d'un opticien connu.
+						<i class="fas fa-eye"></i>
+					</figcaption>
+				</figure>
+
+				<figure>
+					<img src="public/images/webagency_images/portfolio/02.jpg" alt="image2" />
+					<figcaption>Le projet ciné amateur<br/>d'un fan de Donnie Darko.
+						<i class="fas fa-eye"></i>
+					</figcaption>
+				</figure>
+
+				<figure>
+					<img src="public/images/webagency_images/portfolio/03.jpg" alt="image3" />
+					<figcaption>Ce n'est pas la marquise<br/>mais Pompadour perpétue son style.
+						<i class="fas fa-eye"></i>
+					</figcaption>
+				</figure>
+
+				<figure>
+					<img src="public/images/webagency_images/portfolio/04.jpg" alt="image4" />
+					<figcaption>Les origamis pour les nuls.<br/>Ou l'art du pliage japonais.
+					<i class="fas fa-eye"></i>
+					</figcaption>
+				</figure>
+
+				<figure>
+					<img src="public/images/webagency_images/portfolio/05.jpg" alt="image5" />
+					<figcaption>Le projet Web qui vous aide<br/>à dénicher les bonnes affaires.
+						<i class="fas fa-eye"></i>
+					</figcaption>
+				</figure>
+
+				<figure>
+					<img src="public/images/webagency_images/portfolio/06.jpg" alt="image6" />
+					<figcaption>Ne ratez aucun point d'intérêt<br/>avec ce compagnon de voyage.
+						<i class="fas fa-eye"></i>
+					</figcaption>
+				</figure>
+
+				<figure>
+					<img src="public/images/webagency_images/portfolio/07.jpg" alt="image7" />
+					<figcaption>Les voyages dans l'espace<br/>pour les particuliers, c'est pour bientôt.
+						<i class="fas fa-eye"></i>
+					</figcaption>
+				</figure>
+
+				<figure>
+					<img src="public/images/webagency_images/portfolio/08.jpg" alt="image8" />
+					<figcaption>Besoin d'imprimer votre marque<br/>ou logo? Le site web d'un imprimeur.
+						<i class="fas fa-eye"></i>
+					</figcaption>
+				</figure>
+
+			</div>
+
+		</section>
+
+			<!--Section contact-->
+	<footer id="contact">
+
+		<!--la google map-->
+		<div id="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41995.898328292824!2d2.310413386797748!3d48.86309861311561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e1442c049bb%3A0x30a290491097f07f!2sWebAgency!5e0!3m2!1sfr!2sfr!4v1573416501854!5m2!1sfr!2sfr" width="800" height="600" style="border:0;" allowfullscreen=""></iframe>
+		</div>
+		
+		<!--le formulaire de contact-->
+		<fieldset>
+
+			<div id="contact_info">
+				<h3>Contact Info</h3>
+				<p><strong>WebAgency SAS</strong><br/>25 Rue d'Hauteville 75010 Paris<br/>Tél: 01 02 03 04 05</p>
+			</div>
+			
+			<form method="post" action="index.html">
+				<input type="text" id="nom" placeholder="Nom">
+				<input type="email" id="mail" placeholder="Adresse mail">
+				<input type="text" id="objet" placeholder="Sujet">
+				<textarea rows="8" cols="25" id="message" placeholder="Message"></textarea>
+				<input id="submit" type="button" value="Envoyer">
+			</form>
+		</fieldset>
+
+	</footer>
+
+	<script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+	<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+	<script src='public/js/Slider.js'></script>
+
+	</body>
+
+</html>
