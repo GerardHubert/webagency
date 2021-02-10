@@ -6,7 +6,7 @@ class Slider extends React.Component {
         this.timer = 5000;
         this.state = {
             index: 0,
-            progress: 1
+            progress: 1,
         };
     }
 
@@ -31,6 +31,7 @@ class Slider extends React.Component {
     }
 
     nextSlide() {
+
         if (this.state.index === this.images.length - 1) {
             this.setState({
                 index: 0
@@ -40,10 +41,51 @@ class Slider extends React.Component {
                 index: this.state.index + 1
             })
         }
+
     }
 
     conmponentWillUnmount() {
         clearInterval(this.interval);
+        clearInterval(this.progression);
+    }
+
+    resetInterval() {
+        this.conmponentWillUnmount();
+        this.componentDidMount();
+    }
+
+    handlePreviousClick() {
+        
+        if (this.state.index === 0) {
+            this.setState({
+                index: this.images.length - 1,
+                progress: 1
+            })
+            this.resetInterval();
+        } else if (this.state.index === this.images.length - 1) {
+            this.setState({
+                index: this.state.index - 1,
+                progress: 1
+            })
+            this.resetInterval();
+        }
+
+    }
+
+    handleNextClick() {
+        if (this.state.index === 0) {
+            this.setState({
+                index: this.state.index + 1,
+                progress: 1
+            })
+            this.resetInterval();
+        } else if (this.state.index === this.images.length - 1) {
+            this.setState({
+                index: 0,
+                progress: 1
+            })
+            this.resetInterval();
+        }
     }
 
     render() {
@@ -52,14 +94,14 @@ class Slider extends React.Component {
             e("div", { id: "accueil" },
                 e("img", { src: this.images[this.state.index], alt: "Fillette aux mains color\xE9es" }),
                 e("div", { className: 'loading' },
-                    e("div", { className: 'loading_bar', style:{
-                        width: this.state.progress + '%'
-                        }
-                    })),
+                    e("div", { className: 'loading_bar', style:{ width: this.state.progress + '%' }})
+                ),
                 e("div", { id: "chevron_gauche" },
-                    e("i", { className: "fas fa-chevron-left" })), 
+                    e("i", { className: "fas fa-chevron-left", onClick: () => {this.handlePreviousClick() }})
+                ), 
                 e("div", { id: "chevron_droit" },
-                    e("i", { className: "fas fa-chevron-right" })),
+                    e("i", { className: "fas fa-chevron-right", onClick: () => {this.handleNextClick() }})
+                ),
                 e("div", { id: "presentation" },
                     e("h1", null,
                        e("strong", null, "WEBAGENCY"),
