@@ -11,11 +11,13 @@ class Slider extends React.Component {
     }
 
     componentDidMount() {
-        this.interval = setInterval(() => 
-            this.nextSlide(), 5000);
+        /*this.interval = setInterval(() =>
+            this.nextSlide(), 5000);*/
+        this.interval = setInterval(() => {
+            this.nextSlide()}, this.timer);
 
-        this.progression = setInterval(() => 
-            this.progressBar(), 50);
+        this.progression = setInterval(() => {
+            this.progressBar()}, 50);
     }
 
     progressBar() {
