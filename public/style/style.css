@@ -71,6 +71,15 @@ nav img{
     align-items: flex-end;
 }
 
+.nav_fixed{
+    background-color: white;
+}
+
+.nav_onScroll{
+    background-color: rgba(0, 0, 0, 0.3);
+    box-sizing: content-box;
+}
+
         /*Design des liens du menu*/
 #menu a{
     font-family: roboto;
@@ -82,6 +91,10 @@ nav img{
     justify-content: center;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.6);  /*Couleur par défaut des liens (gris).*/
+}
+
+.a_onScroll{
+    color: white;
 }
 
         /*lien_accueil actif et au hover sur services, portfolio et contact*/
